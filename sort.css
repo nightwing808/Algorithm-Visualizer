@@ -1,0 +1,190 @@
+body {
+    background:  black ;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+    font-size: 15px;
+    font-family: sans-serif;
+}
+
+#headerTop {
+    width: 330px;
+    padding-left: 1%;
+    font-size: 110%;
+    color:white;
+    font-size: 30px;
+    padding-top: 20px;
+    padding-bottom: 30px;
+    font-family: "Press start 2P";
+}
+#title1{
+    color: rgb(0, 183, 37);
+    padding: 2px;
+}
+#title2{
+    padding-left: 15px;
+}
+a {
+    color: white;
+    text-decoration: none;
+}
+
+#header{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-bottom: 50px;
+}
+
+#headerLeft {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-left: 1%;
+    padding-right: 1%;
+}
+.headerLeftContent {
+    display: flex;
+}
+.slidecontainer {
+    height: 40px;
+    position: relative;
+    padding-right: 20px;
+    align-items: center;
+    font-size: 15px;
+    font-family: sans-serif;
+    color: rgb(0, 183, 37);
+}
+.slider {
+    outline: none;
+    opacity: 0.8;
+    -webkit-transition: 0.4s;
+    transition: opacity 0.3s;
+}
+.slider:hover {
+    opacity: 1;
+}
+.slider::-webkit-slider-thumb {
+    cursor: pointer;
+}
+.sliderValue {
+    position: absolute;
+    top: 20px;
+    left: 40px;
+}
+.speedValue {
+    position: absolute;
+    top: 20px;
+    left: 40px;
+}
+
+#headerRight {
+    text-align: center;
+    padding-left: 40px;
+}
+#sort_type {
+    height: 40px;
+    width: 135px;
+    align-content: center;
+    border-radius: 3px;
+    background: #161824;
+    color: rgb(0, 183, 37);
+    font-size: 15px;
+    outline: none;
+    border: none;
+    letter-spacing: 1.2px;
+}
+
+#container {
+    display: flex;
+    height: 310px;
+    width: 90%;
+    min-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.bar {
+    margin-right: 1px;
+    align-self: flex-end;
+    transition: 0.2s transform ease;
+    position: absolute;
+}
+.barValue {
+    margin-right: 1px;
+    align-self:flex-end;
+    transition: 0.2s transform ease;
+    position: absolute;
+    color: rgb(0, 183, 37);
+}
+
+.button {
+    padding: 0.8rem 1.4rem;
+    font-size: 1rem;
+    color: rgb(0, 183, 37);
+    border-radius: 3px;
+    background: #161824;
+    letter-spacing: 1.2px;
+    border: none;
+    outline: none;
+    margin-top: 1rem;
+    transition: all 0.25s ease-in-out;
+}
+.button:hover {
+    cursor: pointer;
+    transform: scale(1.1) perspective(1px);
+}
+#buttonsdiv {
+    text-align: center;
+    margin-bottom: 30px;
+}
+#sortButton {
+    margin-right: 10px;
+}
+#stopButton {
+    margin-left: 10px;
+}
+
+#generateButton {
+    padding: 0.4rem 0.8rem;
+    font-size: 15px;
+    font-family: sans-serif;
+    border-radius: 3px;
+    margin-top: 0px;
+    font-size: 0.9rem;
+}
+#generateButton:hover {
+    transform: scale(1.08) perspective(1px);
+}
+
+@media (max-width: 900px) {
+    #title {
+        font-size: 0px;
+    }
+    .slidecontainer,
+    #sort_type {
+        margin-top: 0px;
+    }
+}
+
+#logArea {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    width: 500px;
+    z-index: 1000;
+}
+
+#log {
+    font-size: 10px;
+    color: rgb(255, 255, 255);
+    border-radius: 5px;
+    background: #161824;
+    letter-spacing: 1.2px;
+    height: 180px;
+    width: 500px;
+    resize: none;
+}

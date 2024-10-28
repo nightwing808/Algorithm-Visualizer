@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="sort.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <title>sorting</title>
+</head>
+
+<body>
+    <div id="headerTop">
+        <a href="index.html" target=_self>
+            <div id="title1">ALGORITHM</div>
+            <div id="title2">VISUALIZER</div>
+        </a>
+    </div>
+    <div id="header">
+        <div id="headerLeft">
+            <div class="headerLeftContent">
+                <div class="slidecontainer">
+                    <input type="range" min="50" max="400" value="150" class="slider" id="speedSlider" />
+                    <div class="speedValue">Speed</div>
+                </div>
+                <div class="slidecontainer">
+                    <input type="range" min="10" max="100" value="50" class="slider" id="barSlider" />
+                    <div class="sliderValue">Bars: 50</div>
+                </div>
+                <button class="button" id="generateButton">Generate</button>
+            </div>
+        </div>
+        <div id="headerRight">
+            <select id="sort_type" name="sort_type">
+                <option value="insertion" selected>Insertion Sort</option>
+                <option value="bubble">Bubble Sort</option>
+                <option value="merge">Merge Sort</option>
+                <option value="selection">Selection Sort</option>
+                <option value="quick">Quick Sort</option>
+                <option value="tim">Tim sort</option>
+            </select>
+        </div>
+    </div>
+    
+    <div id="container"></div>
+
+    <div id="buttonsdiv">
+        <button type="button" id="sortButton" class="button">Sort</button>
+        <button type="button" id="pauseButton" class="button">Pause</button>
+        <button type="button" id="stopButton" class="button">Stop</button>
+    </div>
+
+    <div id="logArea">
+        <textarea id="log" readonly></textarea>
+    </div>
+
+    <script src="sort.js"></script>
+</body>
+</html>

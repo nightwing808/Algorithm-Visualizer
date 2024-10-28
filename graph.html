@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Graph</title>
+    <link rel="stylesheet" href="graph.css">
+    <script type="text/javascript" src="libs/vis-network.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="headerTop">
+        <a href="index.html">
+            <div id="title1">ALGORITHM</div>
+            <div id="title2">VISUALIZER</div>
+        </a>
+    </div>
+    <div id="header">
+        <select id="algorithm_type">
+            <option value="dijkstra" selected>Dijkstra</option>
+            <option value="bfs">BFS</option>
+            <option value="dfs">DFS</option>
+            <option value="top_sort">Topological Sort</option>
+        </select>
+    </div>
+    <div id="part">
+        <div class="input-section">
+            <div class="input-row-1">
+                <select id="direction" class="c">
+                    <option value="directed" selected>Directed</option>
+                    <option value="undirected">Undirected</option>
+                </select>
+                <select id="Weight" class="c">
+                    <option value="weighted" selected>Weighted</option>
+                    <option value="unweighted">Unweighted</option>
+                </select>
+            </div>
+            <div class="input-row-2">
+                <label for="Adjacency List">Graph input : </label>
+            </div>
+            <div class="input-row-3">
+                <textarea id="Adjacency List" class="styled-list" placeholder="The first input line has two integers n ,m ,s : node ,edges and start node&#10;Then there are m lines describing edges&#10;For weighted : 1 2 3&#10;For unweighted : 1 2"></textarea>
+            </div>
+            <div class="input-row-4">
+                <button id="generateButton">Generate Graph</button>
+            </div>
+        </div>
+        <div class="output-section">
+            <div class="output-row-1">
+                <div id="container"></div>
+            </div>
+            <div class="output-row-2">
+                <button id="visualizeButton" class="button"><p>Visualize</p></button>
+                <button id="pauseButton" class="button"><p>Pause</p></button>
+            </div>
+        </div>
+    </div>
+    <div id="logArea">
+        <textarea id="log" readonly></textarea>
+    </div>
+    <script src="graph.js"></script>
+</body>
+</html>
