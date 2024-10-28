@@ -406,107 +406,124 @@ async function topologicalSort(adjacencyList, nodeCount, isDirected, network) {
         logAction("Topological Order: " + topologicalOrder.join(", "));
     }
 }
-
-
+// Queue class for standard queue operations
 class Queue {
     constructor() {
-        this.items = [];
+        this.items = []; // Initialize an empty array to store queue elements
     }
 
+    // Add an element to the end of the queue
     enqueue(element) {
         this.items.push(element);
     }
 
+    // Remove and return the first element of the queue
     dequeue() {
         if (this.isEmpty()) {
-            return "Queue is empty";
+            return "Queue is empty"; // Return message if queue is empty
         }
         return this.items.shift();
     }
 
+    // Check if the queue is empty
     isEmpty() {
         return this.items.length === 0;
     }
 
+    // Get the first element without removing it
     front() {
         if (this.isEmpty()) {
-            return "Queue is empty";
+            return "Queue is empty"; // Return message if queue is empty
         }
         return this.items[0];
     }
 
+    // Get the number of elements in the queue
     size() {
         return this.items.length;
     }
 }
 
-
+// MinPriorityQueue class for a priority queue with minimum priority as the highest priority
 class MinPriorityQueue {
     constructor() {
-        this.items = [];
+        this.items = []; // Initialize an empty array for queue items
     }
 
+    // Add an element to the queue with a given priority
     enqueue(element, priority) {
-        const queueElement = { element, priority };
+        const queueElement = { element, priority }; // Create an object for the element and its priority
         let added = false;
 
+        // Loop through queue to find correct insertion point based on priority
         for (let i = 0; i < this.items.length; i++) {
             if (this.items[i].priority > queueElement.priority) {
-                this.items.splice(i, 0, queueElement);
+                this.items.splice(i, 0, queueElement); // Insert at correct position based on priority
                 added = true;
                 break;
             }
         }
 
+        // If element has the lowest priority, add it at the end
         if (!added) {
             this.items.push(queueElement);
         }
     }
 
+    // Remove and return the element with the highest priority (lowest priority value)
     dequeue() {
         return this.items.shift();
     }
 
+    // Check if the priority queue is empty
     isEmpty() {
         return this.items.length === 0;
     }
 }
 
-
+// Event listener for visualizeButton to trigger graph visualization and algorithm selection
 document.getElementById('visualizeButton').addEventListener('click', function () {
-    const algorithmType = document.getElementById('algorithm_type').value;
-    const adjacencyListInput = document.getElementById('Adjacency List').value.trim();
-    const isWeighted = document.getElementById('Weight').value === 'weighted';
-    const isDirected = document.getElementById('direction').value === 'directed';
+    const algorithmType = document.getElementById('algorithm_type').value; // Selected algorithm type
+    const adjacencyListInput = document.getElementById('Adjacency List').value.trim(); // Get and trim adjacency list input
+    const isWeighted = document.getElementById('Weight').value === 'weighted'; // Check if graph is weighted
+    const isDirected = document.getElementById('direction').value === 'directed'; // Check if graph is directed
+
+    // Parse adjacency list and other properties
     const { adjacencyList, startNode, nodeCount} = parseAdjacencyList(adjacencyListInput, isWeighted, isDirected);
 
+    // Draw the graph network
     const network = drawGraph(adjacencyListInput, isWeighted, isDirected);
 
+    // Log starting node information
     logAction(startNode);
+
+    // Execute algorithm based on selected type
     if (algorithmType == 'dijkstra') {
         logAction('dijkstra');
-        dijkstra(adjacencyList, startNode, network);
+        dijkstra(adjacencyList, startNode, network); // Run Dijkstra's algorithm
     } else if (algorithmType == 'bfs') {
         logAction('bfs');
-        bfs(adjacencyList, startNode, network);
+        bfs(adjacencyList, startNode, network); // Run Breadth-First Search
     } else if (algorithmType == 'dfs') {
         logAction('dfs');
-        dfs(adjacencyList, startNode, network);
+        dfs(adjacencyList, startNode, network); // Run Depth-First Search
     } else if (algorithmType === 'top_sort') {
-        topologicalSort(adjacencyList, nodeCount, isDirected, network); // New option for topological sort
+        topologicalSort(adjacencyList, nodeCount, isDirected, network); // Run Topological Sort for directed graphs
     }
 });
 
+// Event listener for pauseButton to handle pausing and resuming the visualization
 document.getElementById('pauseButton').addEventListener('click', function () {
-    pauseFlag = !pauseFlag;
+    pauseFlag = !pauseFlag; // Toggle pause flag
 
     if (!pauseFlag) {
+        // If resuming, trigger the paused function to continue, then clear paused state
         if (paused) {
             paused();
             paused = null;
         }
-        this.textContent = 'pause';
+        this.textContent = 'pause'; // Update button text to indicate next action
     } else {
-        this.textContent = 'resume';
+        this.textContent = 'resume'; // Update button text to indicate next action
     }
 });
