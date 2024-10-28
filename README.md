@@ -32,17 +32,11 @@ Algorithm Visualizer is an interactive way and platform that visualize the algor
  - In VSCode, add these extension
 ```bash
 Live Server
+```
+```bash
 JavaScript (ES6) Code Snippets
 ```
 
-- Install [node.js](https://nodejs.org/en)
-- Open Terminal and copy these commands
-```bash
-cd path/to/your/project
-```
-```bash
-npm install vis-network
-```
 ## Screenshots
 
 ![Homepage](https://github.com/nightwing808/Algorithm-Visualizer/blob/main/Preview/HomePage.png)
