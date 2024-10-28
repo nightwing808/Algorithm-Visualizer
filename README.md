@@ -1,7 +1,7 @@
 
 # Algorithm Visualizer
 
-Algorithm Visualizer is an interactive way and platform that visualize the algorithms in three main domain i.e. Basic Graph Algorithm, Path Finding and Sorting algorithm. The project focuses on visualizing 📊 the algorithm and making easier to understand and learn the algorithm.
+Algorithm Visualizer is an interactive way and platform that visualize the algorithms in three main domain i.e. Basic Graph Algorithm, Path Finding and Sorting algorithm. The project focuses on visualizing the algorithm and making easier to understand and learn the algorithm.
 
 ## Authors
 
@@ -12,23 +12,20 @@ Algorithm Visualizer is an interactive way and platform that visualize the algor
  - IDE : VSCode
 
 ## Features
-
-#### Sorting Algorithm
- - Insertion Sort
- - Bubble Sort
- - Merge Sort
- - Selection Sort
- - Quick Sort
- - Tim Sort
-#### Graph
- - DFS
- - BFS
- - Dijkstra
- - Topological Sort
-#### Pathfind (Maze)
- - DFS
- - BFS
- - Dijkstra
+### Supported Algorithms
+- #### Sorting
+    Insertion Sort,Bubble Sort,Merge Sort,Selection Sort,Quick Sort,Tim Sort  
+    - Easily generate random array of different sizes
+    - Change speed of visualization
+- #### Graph
+    DFS,BFS,Dijkstra,Topological Sort  
+    - Interaction in generated graph to get different perspective, where you can rotate,move each component
+    - Specially built for competitive programming, where you can just paste the test cases to generate graph
+- #### Pathfind (Maze)
+    DFS,BFS,Dijkstra  
+    - Three different Algorithms to solve maze problems
+    - Modify the input section easily to create different mazes
+- Log area to review what happened after each process
 
 ## Installation
 
@@ -47,6 +44,7 @@ cd path/to/your/project
 npm install vis-network
 ```
 ## Screenshots
+
 ![Homepage](https://github.com/nightwing808/Algorithm-Visualizer/blob/main/Preview/HomePage.png)
 ![Sorting](https://github.com/nightwing808/Algorithm-Visualizer/blob/main/Preview/Sorting.png)
 ![SortRunning](https://github.com/nightwing808/Algorithm-Visualizer/blob/main/Preview/Sorting%20running.png)
