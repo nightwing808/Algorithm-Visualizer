@@ -47,6 +47,11 @@ cd path/to/your/project
 npm install vis-network
 ```
 ## Screenshots
-
-
-
+![Homepage](https://github.com/nightwing808/Algorithm-Visualizer/blob/main/Preview/HomePage.png)
+![Sorting](https://github.com/nightwing808/Algorithm-Visualizer/blob/main/Preview/Sorting.png)
+![SortRunning](https://github.com/nightwing808/Algorithm-Visualizer/blob/main/Preview/Sorting%20running.png)
+![Pathfind](https://github.com/nightwing808/Algorithm-Visualizer/blob/main/Preview/pathfind.png)
+![FoundPath](https://github.com/nightwing808/Algorithm-Visualizer/blob/main/Preview/found%20path.png)
+![generateGraph](https://github.com/nightwing808/Algorithm-Visualizer/blob/main/Preview/generate%20graph.png)
+![Dijkstra](https://github.com/nightwing808/Algorithm-Visualizer/blob/main/Preview/running%20dijkstra.png)
+![Dfs](https://github.com/nightwing808/Algorithm-Visualizer/blob/main/Preview/running%20dfs.png)
